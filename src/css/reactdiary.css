@@ -1,0 +1,83 @@
+/* reactdiary.css */
+
+/* Reset & global base */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Main diary wrapper */
+.diary-wrapper {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at top left, #20232a, #1a1a1a);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Page title */
+.diary-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #61dafb;
+  border-bottom: 3px solid #61dafb;
+  padding-bottom: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Each React lesson/component wrapper */
+.diary-section {
+  background-color: #242424;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.diary-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .diary-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .diary-title {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .diary-section {
+    padding: 1.5rem;
+  }
+}

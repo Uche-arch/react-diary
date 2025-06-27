@@ -1,0 +1,122 @@
+/* create&nest.css */
+
+/* Section wrapper */
+.lesson-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+  }
+  
+  .lesson-section:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Section heading */
+  .lesson-title {
+    font-size: 1.8rem;
+    color: #61dafb;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Paragraph text */
+  .lesson-text {
+    font-size: 1rem;
+    color: #cfcfcf;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Balance display */
+  .balance {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #00ff87;
+  }
+  
+  /* Table styling */
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+    background-color: #292929;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .stock-table th,
+  .stock-table td {
+    padding: 0.75rem 1rem;
+  }
+  
+  .stock-table thead {
+    background-color: #333;
+    color: #61dafb;
+    border-bottom: 2px solid #444;
+  }
+  
+  .stock-table tbody tr:nth-child(odd) {
+    background-color: #252525;
+  }
+  .stock-table tbody tr:nth-child(even) {
+    background-color: #1f1f1f;
+  }
+  
+  .stock-table td {
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Price change colors */
+  .price-up {
+    color: #00e676;
+  }
+  
+  .price-down {
+    color: #ff5252;
+  }
+  
+  .price-same {
+    color: #ccc;
+  }
+  
+  /* Buttons */
+  .stock-table button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease;
+  }
+  
+  .stock-table button:hover {
+    transform: scale(1.05);
+  }
+  
+  .stock-table button:first-child {
+    background-color: #00c853;
+  }
+  
+  .stock-table button:last-child {
+    background-color: #d50000;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stock-table th,
+    .stock-table td {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+    .lesson-title {
+      font-size: 1.5rem;
+    }
+  }
+  

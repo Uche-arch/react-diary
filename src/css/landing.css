@@ -1,0 +1,78 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Container */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  background: radial-gradient(circle at top left, #20232a, #1a1a1a);
+}
+
+/* Header Section */
+.landing-header {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Logo */
+.logo {
+  height: 80px;
+  animation: pulse 2s infinite ease-in-out;
+  margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Text Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.explore-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.explore-btn:hover {
+  background-color: #21a1f1;
+  transform: scale(1.05);
+}
