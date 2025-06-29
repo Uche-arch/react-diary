@@ -50,22 +50,22 @@ function RobotCustomizer() {
             checked={antenna}
             onChange={() => setAntenna(!antenna)}
           />
-          Show Antenna
+          My weakness
         </label>
-        <label>
+        {/* <label>
           <input
             type="checkbox"
             checked={arms}
             onChange={() => setArms(!arms)}
           />
           Show Arms
-        </label>
+        </label> */}
       </div>
 
       <div className="robot-preview" style={{ backgroundColor: color }}>
         <div className="robot-face">{face}</div>
-        {antenna && <div className="robot-part">📡 Antenna</div>}
-        {arms && <div className="robot-part">💪 Arms</div>}
+        {antenna && <div className="robot-part">Those pretty eyes of yours</div>}
+        {/* {arms && <div className="robot-part">💪 Arms</div>} */}
       </div>
 
       <h3 className="lesson-subtitle">✅ What I Now Understand:</h3>

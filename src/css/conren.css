@@ -65,3 +65,14 @@
     color: #ddd;
   }
   
+
+  @media screen and (max-width: 600px) {
+    .btn {
+    padding: 0.4rem .8rem;
+    font-weight: lighter;
+    }
+    .output-box {
+      padding: .5rem;
+      font-size: .5rem;
+    }
+  }

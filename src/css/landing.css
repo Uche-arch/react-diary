@@ -76,3 +76,34 @@ p {
   background-color: #21a1f1;
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: .9rem;
+  }
+  .explore-btn {
+    padding: 0.65rem 1.3rem;
+    font-size: .9rem;
+  }
+}

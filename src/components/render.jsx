@@ -53,7 +53,7 @@ function BugTracker() {
           value={newBug}
           onChange={(e) => setNewBug(e.target.value)}
         />
-        <button className="btn" onClick={addBug}>
+        <button className="bug-btn" onClick={addBug}>
           Add Bug
         </button>
       </div>
@@ -88,7 +88,7 @@ function BugTracker() {
                 </div>
                 <div>
                   <button
-                    className="btn-mini"
+                    className="btn-close-bug"
                     onClick={() => toggleStatus(index)}
                   >
                     {bug.status === "open" ? "Close" : "Reopen"}

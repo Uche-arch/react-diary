@@ -74,3 +74,14 @@
     }
     
   }
+
+  @media screen and (max-width: 500px) {
+    .lesson-subtitle, .lesson-subtitle-2 {
+      font-size: 1rem;
+    }
+    .lesson-list li {
+      margin-bottom: 0;
+      font-size: .9rem;
+    }
+    
+  }

@@ -92,74 +92,75 @@ function LiveStockTracker() {
       <div className="balance" style={{ color: "green" }}>
         💼 Balance: <strong>${balance.toLocaleString()}</strong>
       </div>
+      <div className="table-container">
+        <table className="stock-table">
+          <thead>
+            <tr>
+              <th>Stock</th>
+              <th>Price</th>
+              <th>Change</th>
+              <th>Owned</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <AnimatePresence>
+            <tbody>
+              {prices.map((stock, i) => {
+                const direction = getDirection(stock.price, stock.previous);
+                const arrow =
+                  direction === "up" ? "🔼" : direction === "down" ? "🔽" : "⏺";
+                const className =
+                  direction === "up"
+                    ? "price-up"
+                    : direction === "down"
+                    ? "price-down"
+                    : "price-same";
 
-      <table className="stock-table enhanced">
-        <thead>
-          <tr>
-            <th>Stock</th>
-            <th>Price</th>
-            <th>Change</th>
-            <th>Owned</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <AnimatePresence>
-          <tbody>
-            {prices.map((stock, i) => {
-              const direction = getDirection(stock.price, stock.previous);
-              const arrow =
-                direction === "up" ? "🔼" : direction === "down" ? "🔽" : "⏺";
-              const className =
-                direction === "up"
-                  ? "price-up"
-                  : direction === "down"
-                  ? "price-down"
-                  : "price-same";
-
-              return (
-                <motion.tr
-                  key={stock.name}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <td>
-                    <strong>{stock.name}</strong>
-                  </td>
-                  <td className={`price-value ${className}`}>
-                    {formatPrice(stock.price)}
-                  </td>
-                  <td className={`price-change ${className}`}>
-                    {arrow}{" "}
-                    {direction !== "same"
-                      ? direction === "up"
-                        ? "+"
-                        : "-"
-                      : ""}
-                    {Math.abs(stock.price - stock.previous).toFixed(2)}
-                  </td>
-                  <td>{portfolio[stock.name] || 0}</td>
-                  <td>
-                    <button
-                      onClick={() => handleBuy(stock)}
-                      style={{ backgroundColor: "green" }}
-                    >
-                      Buy
-                    </button>
-                    <button
-                      onClick={() => handleSell(stock)}
-                      style={{ backgroundColor: "red" }}
-                    >
-                      Sell
-                    </button>
-                  </td>
-                </motion.tr>
-              );
-            })}
-          </tbody>
-        </AnimatePresence>
-      </table>
+                return (
+                  <motion.tr
+                    key={stock.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <td>
+                      <strong>{stock.name}</strong>
+                    </td>
+                    <td className={`price-value ${className}`}>
+                      {formatPrice(stock.price)}
+                    </td>
+                    <td className={`price-change ${className}`}>
+                      {arrow}{" "}
+                      {direction !== "same"
+                        ? direction === "up"
+                          ? "+"
+                          : "-"
+                        : ""}
+                      {Math.abs(stock.price - stock.previous).toFixed(2)}
+                    </td>
+                    <td>{portfolio[stock.name] || 0}</td>
+                    <td>
+                      <button
+                        onClick={() => handleBuy(stock)}
+                        style={{ backgroundColor: "green" }}
+                      >
+                        Buy
+                      </button>
+                      <button
+                        onClick={() => handleSell(stock)}
+                        style={{ backgroundColor: "red" }}
+                      >
+                        Sell
+                      </button>
+                    </td>
+                  </motion.tr>
+                );
+              })}
+            </tbody>
+          </AnimatePresence>
+        </table>
+      </div>
     </motion.section>
   );
 }

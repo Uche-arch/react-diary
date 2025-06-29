@@ -1,7 +1,7 @@
 /* Bug Tracker Styles */
 
 /* Input row layout */
-.input-row {
+/* .input-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -9,7 +9,7 @@
     background-color: #2a2a2a;
     padding: 1rem;
     border-radius: 8px;
-  }
+  } */
   
   /* Text input */
   .input {
@@ -29,7 +29,7 @@
   }
   
   /* Add Bug button */
-  .btn {
+  .bug-btn {
     background-color: #61dafb;
     border: none;
     border-radius: 8px;
@@ -38,6 +38,14 @@
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s ease;
+  }
+
+  .btn-close-bug {
+    background-color: #61dafb;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border: none;
   }
   
   .btn:hover {
@@ -89,7 +97,7 @@
     color: #fff;
   }
   
-  /* Buttons inside list items */
+  /* Buttons inside list items
   .btn-mini {
     background-color: #333;
     color: #fff;
@@ -105,7 +113,7 @@
   .btn-mini:hover {
     background-color: #61dafb;
     color: #000;
-  }
+  } */
   
   .delete-btn {
     background-color: transparent;
@@ -119,4 +127,33 @@
   .delete-btn:hover {
     transform: scale(1.2);
   }
-  
+
+
+  @media screen and (max-width: 600px) {
+    .input {
+      padding: 0.5rem 0.8rem;
+      font-size: .9rem;
+    }
+    .bug-btn {
+      padding: 0.3rem 0.5rem;
+      font-size: .7rem;
+      font-weight: lighter;
+    }
+    .task-item {
+      padding: .4rem;
+      margin-bottom: .6rem;
+      font-size: .85rem;
+      font-weight: lighter;
+    }
+    .bug-status {
+      font-size: 0.6rem;
+      padding: 0.2rem 0.4rem;
+      display: none;
+    }
+    .btn-close-bug {
+      font-weight: lighter;
+      padding: 0.3rem 0.7rem;
+      font-size: .6rem;
+      display: none;
+    }
+  }

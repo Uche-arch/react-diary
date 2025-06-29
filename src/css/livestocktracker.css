@@ -107,16 +107,54 @@
     background-color: #d50000;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .stock-table th,
-    .stock-table td {
-      padding: 0.5rem;
-      font-size: 0.85rem;
+
+  @media screen and (max-width: 500px) {
+    .lesson-section {
+      padding: .5rem;
+    }
+    .lesson-title {
+      font-size: 1rem;
+    }
+    .lesson-text {
+      font-size: .9rem;
+    }
+    .balance {
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+    }
+    .stock-table {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .table-container {
+      overflow-x: scroll;
+      /* width: 100%; */
     }
   
-    .lesson-title {
-      font-size: 1.5rem;
+    .stock-table th,
+    .stock-table td {
+      padding: 6px 8px;
+      font-size: 11px;
     }
+
+    .stock-table button {
+      padding: 3px 5px;
+      font-size: 11px;
+      font-weight: lighter;
+    }
+  
+    /* Optional: hide some columns for tiny screens */
+    .stock-table th:nth-child(4),
+    .stock-table td:nth-child(4) {
+      display: none;
+    }
+    
+  
+    /* Or stack data if you want a mobile-first approach */
+  
+  
   }
+
+
   
