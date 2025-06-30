@@ -4,8 +4,7 @@ import "../css/robotcustomizer.css";
 function RobotCustomizer() {
   const [color, setColor] = useState("gray");
   const [face, setFace] = useState("😊");
-  const [antenna, setAntenna] = useState(true);
-  const [arms, setArms] = useState(true);
+  const [antenna, setAntenna] = useState(false);
 
   return (
     <section className="lesson-section">
