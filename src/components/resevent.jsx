@@ -52,14 +52,7 @@ function RobotCustomizer() {
           />
           My weakness
         </label>
-        {/* <label>
-          <input
-            type="checkbox"
-            checked={arms}
-            onChange={() => setArms(!arms)}
-          />
-          Show Arms
-        </label> */}
+        
       </div>
 
       <div className="robot-preview" style={{ backgroundColor: color }}>
