@@ -43,9 +43,10 @@
   .btn-close-bug {
     background-color: #61dafb;
     border-radius: 8px;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     border: none;
+    margin-right: 10px;
   }
   
   .btn:hover {

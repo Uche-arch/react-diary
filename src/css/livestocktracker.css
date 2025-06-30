@@ -108,7 +108,7 @@
   }
   
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     .lesson-section {
       padding: .5rem;
     }

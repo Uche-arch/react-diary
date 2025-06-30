@@ -4,7 +4,7 @@ import "../css/bugtracker.css";
 
 function BugTracker() {
   const [bugs, setBugs] = useState([
-    { title: "Login page not responsive", status: "open" },
+    { title: "Error on line 132, rubberduck needed.😂", status: "open" },
     { title: "Dashboard crashes on reload", status: "open" },
   ]);
   const [newBug, setNewBug] = useState("");

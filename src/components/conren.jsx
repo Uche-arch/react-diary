@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import "../css/conren.css";
+import confetti from "canvas-confetti";
 
 function ConditionalRendering() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => setIsLoggedIn(true);
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+
+    // 🎉 Trigger confetti after logging in
+    confetti({
+      particleCount: 220,
+      spread: 100,
+      origin: { y: 0.6 },
+    });
+  };
   const handleLogout = () => setIsLoggedIn(false);
 
   return (
@@ -19,18 +29,18 @@ function ConditionalRendering() {
 
       <div className="button-group">
         <button className="btn" onClick={handleLogin}>
-          Log In
+          Show
         </button>
         <button className="btn btn-secondary" onClick={handleLogout}>
-          Log Out
+          Hide
         </button>
       </div>
 
       <div className="output-box">
         {isLoggedIn ? (
-          <h2>Welcome back, user! 🎉</h2>
+          <h2>Smile, you're amazing!😊</h2>
         ) : (
-          <h2>Please log in to continue. 🔐</h2>
+          <h2>I have a message for you. Click the show button.</h2>
         )}
       </div>
 
