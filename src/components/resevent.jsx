@@ -8,12 +8,12 @@ function RobotCustomizer() {
 
   return (
     <section className="lesson-section">
-      <h2 className="lesson-title">🤖 Robot Customizer (Advanced Events)</h2>
+      <h2 className="lesson-title">Customizer (Advanced Events)</h2>
 
       <p className="lesson-text">
-        I built this interactive robot customizer to explore advanced event
-        handling and dynamic rendering. Users can customize face, color, and
-        features — and the robot preview updates instantly.
+        I built this while learning how to respond to events in
+        React. You can't think of how happy I was building this😂, all controlled with `useState` and
+        conditional rendering.
       </p>
 
       <div className="input-row">
@@ -21,16 +21,16 @@ function RobotCustomizer() {
         <button className="btn-mini" onClick={() => setFace("😊")}>
           😊
         </button>
-        <button className="btn-mini" onClick={() => setFace("😎")}>
-          😎
+        <button className="btn-mini" onClick={() => setFace("🥰")}>
+          🥰
         </button>
-        <button className="btn-mini" onClick={() => setFace("🤖")}>
-          🤖
+        <button className="btn-mini" onClick={() => setFace("❤")}>
+          ❤
         </button>
       </div>
 
       <div className="input-row">
-        <label>Pick a Color:</label>
+        <label>Pick a Background:</label>
         <button className="btn-mini" onClick={() => setColor("gray")}>
           Gray
         </button>
@@ -51,20 +51,22 @@ function RobotCustomizer() {
           />
           My weakness
         </label>
-        
       </div>
 
       <div className="robot-preview" style={{ backgroundColor: color }}>
         <div className="robot-face">{face}</div>
-        {antenna && <div className="robot-part">Those pretty eyes of yours</div>}
+        {antenna && (
+          <div className="robot-part">Those pretty eyes of yours</div>
+        )}
         {/* {arms && <div className="robot-part">💪 Arms</div>} */}
       </div>
 
-      <h3 className="lesson-subtitle">✅ What I Now Understand:</h3>
+      <h3 className="lesson-subtitle">What I Now Understand:</h3>
       <ul className="lesson-list">
         <li>How to respond to button clicks, checkboxes, and events</li>
         <li>How to update multiple pieces of state</li>
         <li>How to render UI conditionally based on events and state</li>
+        <li>Coding in React.js is fun, if you are relentless</li>
       </ul>
     </section>
   );

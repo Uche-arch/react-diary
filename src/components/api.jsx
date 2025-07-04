@@ -26,11 +26,15 @@ function RandomUserCard() {
 
   return (
     <section className="lesson-section">
-      <h2 className="lesson-title">🧑‍💻 Random User Card (API Project)</h2>
-      <p className="lesson-text">
+      <h2 className="lesson-title">Random User Card (API Project)</h2>
+      <p className="lesson-text" style={{ marginBottom: "-4px" }}>
+        This was quite a complicated one, but I dealt with it.
+      </p>
+      <p className="lesson-text" style={{ marginBottom: "-2px" }}>
         I used <code>fetch()</code> and <code>useState</code> to call{" "}
         <code>randomuser.me</code> API and display a new profile on demand.
       </p>
+      <p className="lesson-text">For quiet days? Just seeing a smile can make a big difference.🥰</p>
 
       <div className="filter-group">
         <label htmlFor="gender">Filter by Gender:</label>
@@ -66,12 +70,6 @@ function RandomUserCard() {
             </h3>
             <p>
               <strong>Gender:</strong> {user.gender}
-            </p>
-            <p>
-              <strong>Age:</strong> {user.registered.age}
-            </p>
-            <p>
-              <strong>Email:</strong> {user.email}
             </p>
             <p>
               <strong>Location:</strong> {user.location.city},{" "}

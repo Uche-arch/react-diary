@@ -13,7 +13,7 @@ function LandingPage() {
           docs.
         </p>
         <Link to="/diary">
-          <button className="explore-btn">🚀 Explore Diary</button>
+          <button className="explore-btn"> Explore Diary</button>
         </Link>
       </header>
     </div>

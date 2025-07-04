@@ -22,9 +22,8 @@ function ConditionalRendering() {
       <h2 className="lesson-title">🔀 Conditional Rendering (Interactive)</h2>
 
       <p className="lesson-text">
-        Today I learned how to render different content based on conditions —
-        and now I’ve built a live demo that responds to button clicks to switch
-        between logged-in and logged-out states.
+        Today I learned how to render different content based on conditions,
+        and now I’ve built a live demo that responds to button clicks to switch texts BEAUTIFULLY.
       </p>
 
       <div className="button-group">
@@ -44,8 +43,9 @@ function ConditionalRendering() {
         )}
       </div>
 
-      <h3 className="lesson-subtitle">✅ What I Now Understand:</h3>
+      <h3 className="lesson-subtitle">What I Now Understand:</h3>
       <ul className="lesson-list">
+        <li>Working with react hooks</li>
         <li>State (`useState`) can control what shows on screen</li>
         <li>Buttons can update state to trigger re-rendering</li>
         <li>Conditional rendering brings life to the UI</li>

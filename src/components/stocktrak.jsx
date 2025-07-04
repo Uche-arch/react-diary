@@ -82,15 +82,18 @@ function LiveStockTracker() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="lesson-title">📊 Live Stock Trading Simulator</h2>
+      <h2 className="lesson-title">Stock Trading Project</h2>
 
       <p className="lesson-text">
-        I built this project to feel like a real trader — watching prices go
-        up/down, buying & selling stocks, and tracking balance.
+        I built this project to simulate the experience of a stock trader,
+        watching prices move, buying/selling stocks etc😅. <br /> It uses <code>useState</code> and <code>useEffect</code>{" "}
+        for real-time logic, with price updates at random intervals (not just
+        fixed seconds). This project helped me deeply understand how to manage
+        dynamic data, trigger effects, and make React apps feel alive.
       </p>
 
       <div className="balance" style={{ color: "green" }}>
-        💼 Balance: <strong>${balance.toLocaleString()}</strong>
+        Balance: <strong>${balance.toLocaleString()}</strong>
       </div>
       <div className="table-container">
         <table className="stock-table">

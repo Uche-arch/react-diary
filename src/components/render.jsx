@@ -36,13 +36,11 @@ function BugTracker() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="lesson-title">
-        🐞 Bug Tracker (Rendering Lists with Power)
-      </h2>
+      <h2 className="lesson-title">Bug Tracker (Rendering Lists with Power)</h2>
       <p className="lesson-text">
-        Instead of a basic to-do app, I built a lightweight Bug Tracker to
-        practice rendering lists. It lets me add bugs, toggle status, and delete
-        items — all managed by state.
+        I created this Bug Tracker to practice rendering lists and managing
+        dynamic data. It lets me add, toggle, and delete bugs, all using
+        `useState`, conditional rendering, and event handling. Also to track my annoying bugs.
       </p>
 
       <div className="input-row">
